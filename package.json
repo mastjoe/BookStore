@@ -4,7 +4,10 @@
   "description": "a book store app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d backend",
+    "start": "nodemon --exec babel-node src/app.js",
+    "serve": "node backend/app.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,8 @@
     "pg": "^7.11.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "jasmine": "^3.4.0",
     "nodemon": "^1.19.1"
   }
